@@ -1,0 +1,13 @@
+services:
+  s1:
+    name: example-service-1
+    version: 1.0.0
+    status: deprecated
+  s2:
+    name: example-service-2
+    version: 3.4.0
+    status: active
+  s3:
+    name: example-service-3
+    version: 1.2.3
+    status: active
