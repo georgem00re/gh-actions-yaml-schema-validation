@@ -21,7 +21,7 @@
             },
             "status": {
               "type": "string",
-              "enum": ["active", "deprecated"]
+              "enum": ["active", "decommissioned"]
             }
           }
         }
