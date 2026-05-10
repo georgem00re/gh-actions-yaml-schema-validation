@@ -1,0 +1,14 @@
+name: validate-yaml-on-dispatch
+on:
+  workflow_dispatch:
+jobs:
+  validate-yaml:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6.0.2
+      - uses: actions/setup-node@v6.4.0
+        with:
+          node-version-file: .nvmrc
+      - run: npm install -g ajv-cli
+      - run: yq eval -o=json example.yml > example.json
+      - run: ajv validate -s example.schema.json -d example.json
